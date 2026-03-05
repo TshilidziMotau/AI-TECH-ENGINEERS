@@ -30,6 +30,23 @@ export function Button({ className, variant, size, ...props }: ButtonProps) {
   return <button className={cn(buttonVariants({ variant, size }), className)} {...props} />;
 }
 
+type LinkButtonVariant = VariantProps<typeof buttonVariants>["variant"];
+type LinkButtonSize = VariantProps<typeof buttonVariants>["size"];
+
+type LinkButtonProps = {
+  href: string;
+  children: ReactNode;
+  className?: string;
+  variant?: LinkButtonVariant | string;
+  size?: LinkButtonSize | string;
+};
+
+export function LinkButton({ href, children, className, variant, size }: LinkButtonProps) {
+  const resolvedVariant: LinkButtonVariant = variant === "secondary" || variant === "ghost" || variant === "primary" ? variant : "primary";
+  const resolvedSize: LinkButtonSize = size === "sm" || size === "md" ? size : "md";
+
+  return (
+    <Link href={href} className={cn(buttonVariants({ variant: resolvedVariant, size: resolvedSize }), className)}>
 type LinkButtonProps = VariantProps<typeof buttonVariants> & {
   href: string;
   children: ReactNode;
