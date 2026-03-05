@@ -32,7 +32,7 @@ export function Button({ className, variant, size, ...props }: ButtonProps) {
 
 type LinkButtonSize = "sm" | "md" | "lg";
 type LinkButtonProps = VariantProps<typeof buttonVariants> & {
-  href: string;
+  href: string | { pathname: string; query?: Record<string, string> };
   children: ReactNode;
   className?: string;
 };
@@ -42,7 +42,7 @@ export function LinkButton({ href, children, className, variant, size }: LinkBut
   const resolvedSize: LinkButtonSize = size === "sm" || size === "md" ? size : "md";
 
   return (
-    <Link href={href} className={cn(buttonVariants({ variant: resolvedVariant, size: resolvedSize }), className)}>
+    <Link href={href as any} className={cn(buttonVariants({ variant: resolvedVariant, size: resolvedSize }), className)}>
       {children}
     </Link>
   );
