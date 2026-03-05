@@ -47,6 +47,15 @@ export function LinkButton({ href, children, className, variant, size }: LinkBut
 
   return (
     <Link href={href} className={cn(buttonVariants({ variant: resolvedVariant, size: resolvedSize }), className)}>
+type LinkButtonProps = VariantProps<typeof buttonVariants> & {
+  href: string;
+  children: ReactNode;
+  className?: string;
+};
+
+export function LinkButton({ href, children, className, variant, size }: LinkButtonProps) {
+  return (
+    <Link href={href} className={cn(buttonVariants({ variant, size }), className)}>
       {children}
     </Link>
   );
