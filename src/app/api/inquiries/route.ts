@@ -14,6 +14,7 @@ export type InquiryRecord = {
 };
 
 const inquiryStore: InquiryRecord[] = [];
+const notificationEmail = "tshilidzimudau62@yahoo.com";
 
 export async function POST(request: Request) {
   const body = (await request.json()) as InquiryRecord;
@@ -22,9 +23,10 @@ export async function POST(request: Request) {
   return NextResponse.json({
     success: true,
     message: "Inquiry stored",
+    notifyTo: notificationEmail,
     integrationReady: {
       crm: "Connect this endpoint to HubSpot/Salesforce",
-      email: "Trigger transactional email from this payload",
+      email: `Forward inquiry payload to ${notificationEmail}`,
     },
   });
 }

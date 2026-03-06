@@ -5,7 +5,16 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 
-const services = ["Drone Mapping", "Drone Surveying", "LiDAR Scanning", "Hydrology Studies", "Structural Design", "Inspections & Progress Monitoring"];
+const services = [
+  "Drone Mapping",
+  "Drone Surveying",
+  "LiDAR Scanning",
+  "Hydrology Studies",
+  "Structural Design",
+  "Inspections & Progress Monitoring",
+  "Road Design Support",
+  "Quantity Surveying (QS)",
+];
 
 const quoteSchema = z.object({
   fullName: z.string().min(2, "Enter your full name"),
@@ -20,6 +29,11 @@ const quoteSchema = z.object({
 });
 
 type QuoteValues = z.infer<typeof quoteSchema>;
+
+type InquiryResponse = {
+  success: boolean;
+  notifyTo?: string;
+};
 
 export function QuoteForm() {
   const [success, setSuccess] = useState<string | null>(null);
@@ -44,10 +58,11 @@ export function QuoteForm() {
       return;
     }
 
+    const payload = { ...parsed.data, submittedAt: new Date().toISOString() };
     const res = await fetch("/api/inquiries", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...parsed.data, submittedAt: new Date().toISOString() }),
+      body: JSON.stringify(payload),
     });
 
     if (!res.ok) {
@@ -55,7 +70,16 @@ export function QuoteForm() {
       return;
     }
 
-    setSuccess("Your project inquiry has been received. Our team will respond with a tailored quotation shortly.");
+    const json = (await res.json()) as InquiryResponse;
+    if (json.notifyTo) {
+      const subject = encodeURIComponent(`Quote request from ${payload.fullName}`);
+      const body = encodeURIComponent(
+        `Name: ${payload.fullName}\nCompany: ${payload.companyName}\nPhone: ${payload.phone}\nEmail: ${payload.email}\nLocation: ${payload.projectLocation}\nService: ${payload.serviceNeeded}\nScope: ${payload.scope}\nSite Size: ${payload.siteSize}\nTurnaround: ${payload.turnaround}`,
+      );
+      window.open(`mailto:${json.notifyTo}?subject=${subject}&body=${body}`, "_blank");
+    }
+
+    setSuccess("Your project inquiry has been received and prepared for email delivery.");
     reset();
   };
 

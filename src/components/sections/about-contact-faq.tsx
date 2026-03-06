@@ -20,8 +20,8 @@ export function AboutContactFaq() {
         </div>
         <div>
           <h3 className="text-2xl text-foreground">Contact</h3>
-          <p className="mt-4 text-muted">WhatsApp: +00 000 0000 (placeholder)</p>
-          <p className="text-muted">Email: projects@aerospatialprime.com (placeholder)</p>
+          <p className="mt-4 text-muted">WhatsApp: +27 64 659 4131</p>
+          <p className="text-muted">Email: tshilidzimudau62@yahoo.com.com</p>
           <p className="text-muted">Coverage: Regional & national deployments</p>
           <LinkButton href="/quote" className="mt-5">
             Start a Project

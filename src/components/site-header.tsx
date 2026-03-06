@@ -9,8 +9,8 @@ export function SiteHeader() {
           AeroSpatial Prime
         </Link>
         <nav className="hidden gap-6 text-sm text-muted md:flex">
-          <Link href="#services">Services</Link>
-          <Link href="#">Portfolio</Link>
+          <Link href="/#services">Services</Link>
+          <Link href="/#portfolio">Portfolio</Link>
           <Link href="/quote">Quote</Link>
         </nav>
         <LinkButton href="/quote" size="sm">
