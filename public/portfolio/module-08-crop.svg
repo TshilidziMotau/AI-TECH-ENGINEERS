@@ -1,0 +1,12 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#0A141D"/>
+<rect x="50" y="60" width="1100" height="680" rx="24" fill="#122130" stroke="#35526D"/>
+<rect x="170" y="190" width="860" height="470" rx="16" fill="#1A2E3E"/>
+<rect x="200" y="220" width="250" height="190" fill="#2FBF71"/>
+<rect x="460" y="220" width="250" height="190" fill="#9DD95B"/>
+<rect x="720" y="220" width="280" height="190" fill="#F2C94C"/>
+<rect x="200" y="420" width="250" height="210" fill="#6CCB5F"/>
+<rect x="460" y="420" width="250" height="210" fill="#3FAE5C"/>
+<rect x="720" y="420" width="280" height="210" fill="#E98A49"/>
+<text x="110" y="145" fill="#D8E6FF" font-size="38" font-family="Arial">Crop Health / NDVI Analysis</text>
+</svg>

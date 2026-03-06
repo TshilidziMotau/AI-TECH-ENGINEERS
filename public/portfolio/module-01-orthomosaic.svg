@@ -1,0 +1,9 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#0B1220"/>
+<rect x="60" y="70" width="1080" height="660" rx="24" fill="#101B32" stroke="#31486F"/>
+<path d="M120 620L360 420L520 540L760 330L980 500L1080 390" stroke="#5BE7FF" stroke-width="10" stroke-linecap="round"/>
+<path d="M130 290L320 220L500 300L700 190L930 250L1060 180" stroke="#6E86FF" stroke-width="8" stroke-linecap="round"/>
+<circle cx="760" cy="330" r="18" fill="#5BE7FF"/>
+<circle cx="360" cy="420" r="14" fill="#6E86FF"/>
+<text x="110" y="150" fill="#D8E6FF" font-size="38" font-family="Arial">Orthomosaic Site Composite</text>
+</svg>
