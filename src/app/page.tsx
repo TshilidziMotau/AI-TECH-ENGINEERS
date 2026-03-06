@@ -2,6 +2,7 @@ import { AboutContactFaq } from "@/components/sections/about-contact-faq";
 import { Hero } from "@/components/sections/hero";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Industries } from "@/components/sections/industries";
+import { MetricsTestimonials } from "@/components/sections/metrics-testimonials";
 import { Services } from "@/components/sections/services";
 import { Showcase } from "@/components/sections/showcase";
 import { TrustDeliverables } from "@/components/sections/trust";
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Services />
       <Industries />
+      <MetricsTestimonials />
       <Showcase />
       <HowItWorks />
       <TrustDeliverables />

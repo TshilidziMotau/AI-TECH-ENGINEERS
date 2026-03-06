@@ -9,8 +9,8 @@ Premium, animated lead-generation web app for AI-driven drone mapping, surveying
 - React Hook Form + Zod
 
 ## Features
-- Cinematic, premium dark-themed landing page
-- Service, industry, portfolio showcase, process, trust deliverables, about/contact/FAQ sections
+- Cinematic, premium dark-themed landing page with scroll-driven motion and animated geospatial visuals
+- Service, industry, metrics/testimonials, portfolio showcase, process, trust deliverables, about/contact/FAQ sections
 - Dedicated quotation request page with validation
 - API route (`/api/inquiries`) with admin-ready inquiry record shape for future CRM/email integration
 - Mobile sticky CTA for lead capture
