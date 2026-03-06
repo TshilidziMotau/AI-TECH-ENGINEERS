@@ -4,6 +4,7 @@ import { HowItWorks } from "@/components/sections/how-it-works";
 import { Industries } from "@/components/sections/industries";
 import { MetricsTestimonials } from "@/components/sections/metrics-testimonials";
 import { Services } from "@/components/sections/services";
+import { ThreeDServices } from "@/components/sections/three-d-services";
 import { Showcase } from "@/components/sections/showcase";
 import { TrustDeliverables } from "@/components/sections/trust";
 import { MobileStickyCta } from "@/components/mobile-sticky-cta";
@@ -16,6 +17,7 @@ export default function Home() {
       <SiteHeader />
       <Hero />
       <Services />
+      <ThreeDServices />
       <Industries />
       <MetricsTestimonials />
       <Showcase />

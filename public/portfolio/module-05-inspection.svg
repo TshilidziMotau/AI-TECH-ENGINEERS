@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#091220"/>
+<rect x="50" y="60" width="1100" height="680" rx="24" fill="#0F1B30" stroke="#2E4567"/>
+<rect x="180" y="210" width="840" height="420" rx="20" fill="#162642" stroke="#557EB3"/>
+<rect x="300" y="290" width="180" height="120" fill="#5B8CCC" opacity="0.55"/>
+<rect x="510" y="300" width="220" height="110" fill="#6E86FF" opacity="0.55"/>
+<rect x="760" y="280" width="150" height="140" fill="#5BE7FF" opacity="0.5"/>
+<circle cx="490" cy="470" r="16" fill="#5BE7FF"/>
+<circle cx="745" cy="460" r="12" fill="#FF7CA8"/>
+<text x="110" y="145" fill="#D8E6FF" font-size="38" font-family="Arial">Structural Inspection Overlay</text>
+</svg>

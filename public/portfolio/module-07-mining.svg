@@ -1,0 +1,9 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1200" height="800" fill="#0B101B"/>
+<rect x="50" y="60" width="1100" height="680" rx="24" fill="#171F30" stroke="#3F4F70"/>
+<path d="M150 610L320 360L520 610L700 300L900 610L1060 420" stroke="#9AC8FF" stroke-width="9" stroke-linecap="round"/>
+<path d="M170 650L340 420L520 650L700 360L890 650L1040 470" stroke="#5BE7FF" stroke-width="6" stroke-linecap="round"/>
+<rect x="760" y="470" width="220" height="90" rx="12" fill="#0E1B2C" stroke="#5BE7FF"/>
+<text x="790" y="525" fill="#D8E6FF" font-size="28" font-family="Arial">Bench 3</text>
+<text x="110" y="145" fill="#D8E6FF" font-size="38" font-family="Arial">Mining Pit Progression</text>
+</svg>
